@@ -1,0 +1,779 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Pulse iD">
+      
+      
+        <link rel="canonical" href="http://www.pulseid.com/advanced_integration/android_studio/index.html">
+      
+      
+        <meta name="author" content="Pulse iD">
+      
+      
+        <link rel="shortcut icon" href="../../favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.0">
+    
+    
+      
+        <title>Android Studio - Android SDK 2.4.1</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-d848f886dc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/xcode.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="cyan" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../../overview/android_studio/index.html" title="Android SDK 2.4.1" class="md-logo md-header-nav__button">
+            <img src="../../logo.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Advanced integration
+                </span>
+              
+            
+            Android Studio
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/danielBC-KIM/danielBC-KIM.git" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../logo.png">
+      </i>
+    
+    Android SDK 2.4.1
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/danielBC-KIM/danielBC-KIM.git" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/android_studio/index.html" title="Android Studio" class="md-nav__link">
+      Android Studio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/android_studio/index.html" title="Android Studio" class="md-nav__link">
+      Android Studio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integration/android_studio/index.html" title="Android Studio" class="md-nav__link">
+      Android Studio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Advanced integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Advanced integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="index.html" title="Android Studio" class="md-nav__link md-nav__link--active">
+      Android Studio
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/danielBC-KIM/danielBC-KIM.git/edit/master/docs/advanced_integration/android_studio.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h1 id="advanced-integration-android-studio">Advanced Integration - Android Studio</h1>
+<p><strong>Deep linking</strong></p>
+<p>Pulse provides “deep linking” capability for the app to perform custom processing. The deep linked content is passed to the app when the user clicks on the notification or as a “silent” payload, where no notification is shown.</p>
+<p>Please refer to the demo app to see the example of using deep linking inside the app</p>
+<ul>
+<li>To use Pulse’s deep link feature, add a class - PulseDeepLinkReceiver to the app and then instantiate this class from app’s application class:</li>
+</ul>
+<pre><code class="java">    PulseDeepLinkReceiver mPulseDeepLinkReceiver = new PulseDeepLinkReceiver (this);
+</code></pre>
+
+<ul>
+<li>Then use intent.getStringExtra method inside the class to get deep linked content:</li>
+</ul>
+<pre><code class="java">    LocalBroadcastManager.getInstance(mApplicationContext).registerReceiver(mSilentDeepLinkReceiver,new IntentFilter(PulseConstants.PULSE_DEEP_LINK_RECEIVER));
+
+    private BroadcastReceiver mSilentDeepLinkReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            setPulseKey(intent.getStringExtra(&quot;key&quot;));
+            Toast.makeText(mApplication, &quot;deeplink =&quot;+intent.getStringExtra(PulseConstants.PULSE_DEEP_LINK_CONTENT),Toast.LENGTH_LONG).show();
+        }
+    }; 
+</code></pre>
+
+<hr />
+<p><strong>App Uri</strong></p>
+<p>Pulse also provides “App Uri” capability for email address, telephone and http URL payload. These can pass specific information directly to an activity when App is in the foreground.</p>
+<p>Please refer to the demo app to see the example of receiving the information.</p>
+<ul>
+<li>To use Pulse’s “App Uri” feature whilst app is in foreground, add a local BroadcastReceiver to the activities you want to be notified in and then use intent.getStringExtra method to get the content: </li>
+</ul>
+<pre><code class="java">// email
+LocalBroadcastManager.getInstance(this.getApplicationContext()).registerReceiver(mAppUriEmailReceiver,new ntentFilter(PulseConstants.PULSE_APP_URI_EMAIL_RECEIVER));
+
+private BroadcastReceiver mAppUriEmailReceiver = new BroadcastReceiver() {
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    setPulseKey(intent.getStringExtra(&quot;key&quot;));
+    Toast.makeText(getApplicationContext(), &quot;content = &quot;+intent.getStringExtra(PulseConstants.PULSE_APP_URI_EMAIL_CONTENT),Toast.LENGTH_LONG).show();
+  }
+};
+
+// http
+LocalBroadcastManager.getInstance(this.getApplicationContext()).registerReceiver(mAppUriHttpReceiver,new IntentFilter(PulseConstants.PULSE_APP_URI_HTTP_RECEIVER));
+
+private BroadcastReceiver mAppUriHttpReceiver = new BroadcastReceiver() {
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    setPulseKey(intent.getStringExtra(&quot;key&quot;));
+    Toast.makeText(getApplicationContext(), &quot;content = &quot;+intent.getStringExtra(PulseConstants.PULSE_APP_URI_HTTP_CONTENT),Toast.LENGTH_LONG).show();
+  }
+};
+
+// telephone
+LocalBroadcastManager.getInstance(this.getApplicationContext()).registerReceiver(mAppUriTelReceiver,new IntentFilter(PulseConstants.PULSE_APP_URI_TEL_RECEIVER));
+
+private BroadcastReceiver mAppUriTelReceiver = new BroadcastReceiver() {
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    setPulseKey(intent.getStringExtra(&quot;key&quot;));
+    Toast.makeText(getApplicationContext(), &quot;content = &quot;+intent.getStringExtra(PulseConstants.PULSE_APP_URI_TEL_CONTENT),Toast.LENGTH_LONG).show();
+  }
+};
+
+protected void setPulseKey(String key) {
+  mApplication.getPulseSDKInstance().setPulseAppUrlKey(key);
+}
+</code></pre>
+
+<hr />
+<p><strong>Segments</strong></p>
+<p>Specific group of users can be targeted based on Segments. Use setSegments method to pass the Segment data from app for targeted engagement:</p>
+<ul>
+<li>You can set up to 10 segments using setSegments method:</li>
+</ul>
+<pre><code class="java">  ArrayList&lt;String&gt; segmentList = new ArrayList&lt;String&gt;();
+  segmentList.add(0, &quot;gender=female&quot;);
+  segmentList.add(1, &quot;age=35&quot;);
+  segmentList.add(2, &quot;job=engineer&quot;);
+  mPulseSDK.setSegments(segmentList);
+</code></pre>
+
+<ul>
+<li>Use clearSegments to remove previously set segments:</li>
+</ul>
+<pre><code class="java">  mPulseSDK.clearSegments();
+</code></pre>
+
+<hr />
+<p><strong>Precise and lastknown location</strong></p>
+<p>Pulse provides two methods for the app to get device location in the foreground (a) High precision location and (b) Last known location
+Please refer to the demo app code to see the complete example.</p>
+<p><strong><em>Request the high prcision location</em></strong></p>
+<p>Use getHighPrecisionLocation() method to request the high precision location</p>
+<pre><code class="java">   mApplication.getPulseSDKInstance().getHighPrecisionLocation(context);
+</code></pre>
+
+<p>where, context = this.getApplicationContext()</p>
+<hr />
+<p><strong><em>Receive the high prcision location</em></strong></p>
+<p>A BroadcastReceiver can then be used to receive the information asynchronously. </p>
+<ul>
+<li>Add the following BroadcastReceiver to AndroidManifest.xml file</li>
+</ul>
+<pre><code class="java">&lt;receiver
+android:name=&quot;com.pulse.sdk.broadcast.receiver.PulsePrecisionLocationReceiver&quot;
+android:enabled=&quot;true&quot;
+android:exported=&quot;false&quot;&gt;
+  &lt;intent-filter&gt;
+  &lt;action
+  android:name=&quot;com.pulse.sdk.broadcast.high.precision.location.CUSTOM_INTENT&quot;&gt;
+  &lt;/action&gt;
+  &lt;/intent-filter&gt;
+&lt;/receiver&gt;
+</code></pre>
+
+<ul>
+<li>
+<p>Then add “com.pulse.sdk.broadcast.receiver” package in the application project</p>
+</li>
+<li>
+<p>Inside the package, create “PulsePrecisionLocationReceiver” class</p>
+</li>
+<li>
+<p>Once setup, they should appear as following directory structure:
+     <img alt="Quickstart Capabilities" src="../images/precise_location_receiver.png" /> </p>
+</li>
+<li>
+<p>Please refer to the demo app’s PulsePrecisionLocationReceiver.java file to get the location information:</p>
+</li>
+</ul>
+<pre><code class="java">public class PulsePrecisionLocationReceiver extends BroadcastReceiver{
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    double dValue = 0;
+    float fValue = 0;
+    long lValue = 0;
+    double latitude =
+    intent.getDoubleExtra(PulseConstants.PULSE_LOCATION_LATITUDE, dValue);
+    double longitude = intent.getDoubleExtra(PulseConstants.PULSE_LOCATION_LONGITUDE, dValue);
+    float accuracy = intent.getFloatExtra(PulseConstants.PULSE_LOCATION_ACCURACY, fValue);
+    long time = intent.getLongExtra(PulseConstants.PULSE_LOCATION_TIME, lValue);
+  }
+}
+</code></pre>
+
+<hr />
+<p><strong><em>Get last known locaton</em></strong></p>
+<p>Use getLastKnownLocation() method to request the last known location from Pulse’s SDK:</p>
+<pre><code class="java">showLastKnownLocation(mApplication.getPulseSDKInstance().getLastKnownLocation(context));
+</code></pre>
+
+<p>where, context = this.getApplicationContext()</p>
+<pre><code class="java">private void showLastKnownLocation(ArrayList&lt;String&gt; mLastKnownLocation) {
+  if((null != mLastKnownLocation)&amp;&amp;(mLastKnownLocation.size()==4)) {
+    Toast.makeText(this, &quot;Last-Known-Location:&quot;
+    +PulseConstants.PULSE_LOCATION_LATITUDE+&quot;=&quot;+mLastKnownLocation.get(0)+&quot;,&quot;
+    +PulseConstants.PULSE_LOCATION_LONGITUDE+&quot;=&quot;+mLastKnownLocation.get(1)+&quot;,&quot;
+    +PulseConstants.PULSE_LOCATION_ACCURACY+&quot;=&quot;+mLastKnownLocation.get(2)+&quot;,&quot;
+    +PulseConstants.PULSE_LOCATION_TIME+&quot;=&quot;+mLastKnownLocation.get(3),
+    Toast.LENGTH_LONG).show();
+  }else {
+    Log.i(TAG, &quot;mLastKnownLocation==Null or mLastKnownLocation.size()!=4)&quot;);
+  }
+}
+</code></pre>
+
+<hr />
+<p><strong><em>Regular locaton update</em></strong></p>
+<p>The app can also receive regular location updates from Pulse in all states of operations.
+A BroadcastReceiver can be used to receive the location information asynchronously.</p>
+<ul>
+<li>Add the following BroadcastReceiver to AndroidManifest.xml file:</li>
+</ul>
+<pre><code class="java">  &lt;receiver
+  android:name=&quot;com.pulse.sdk.broadcast.receiver.PulseLastKnownLocationReceiver&quot;
+  android:enabled=&quot;true&quot;
+  android:exported=&quot;false&quot;&gt;
+     &lt;intent-filter&gt;
+     &lt;action
+     android:name=&quot;com.pulse.sdk.broadcast.last.known.location.CUSTOM_INTENT&quot;&gt;
+     &lt;/action&gt;
+     &lt;/intent-filter&gt;
+  &lt;/receiver&gt;
+</code></pre>
+
+<ul>
+<li>
+<p>Then add “com.pulse.sdk.broadcast.receiver” package in the application project</p>
+</li>
+<li>
+<p>Inside the package, create “PulseLastKnownLocationReceiver” class</p>
+</li>
+<li>
+<p>Once setup, they should appear as following directory structure:
+    <img alt="Quickstart Capabilities" src="../images/last_known_location_receiver.png" /> </p>
+</li>
+<li>Please refer to the demo app’s PulseLastKnownLocationReceiver.java file to get the location information:</li>
+</ul>
+<pre><code class="java">public class PulseLastKnownLocationReceiver extends BroadcastReceiver{
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    double dValue = 0;
+    float fValue = 0;
+    long lValue = 0;
+    double latitude = intent.getDoubleExtra(PulseConstants.PULSE_LOCATION_LATITUDE, dValue);
+    double longitude = intent.getDoubleExtra(PulseConstants.PULSE_LOCATION_LONGITUDE, dValue);
+    float accuracy = intent.getFloatExtra(PulseConstants.PULSE_LOCATION_ACCURACY, fValue);
+    long time = intent.getLongExtra(PulseConstants.PULSE_LOCATION_TIME, lValue);
+  }
+}
+</code></pre>
+
+<hr />
+<p><strong>Google DFP</strong></p>
+<p>Pulse can also perform real-time geo-targeting and dynamic creative personalisation for display ads.</p>
+<p>This capability currently works with Google DFP, when app is in the foreground (i.e.open)</p>
+<p><strong><em>Google DFP SDK</em></strong></p>
+<p>Setup DFP SDK as per Google’s instructions and verify you can display ads without using Pulse:
+<a href="https://developers.google.com/mobile-ads-sdk/docs/dfp/android/quick-start">https://developers.google.com/mobile-ads-sdk/docs/dfp/android/quick-start</a></p>
+<hr />
+<p><strong><em>Enable Pulse capability</em></strong></p>
+<p>Enable Pulse capability on the Activities where ads are being shown:</p>
+<ul>
+<li>
+<p>Use enablePulseDFP method to enable Pulse</p>
+</li>
+<li>
+<p>Use Pulse’s getDFPCustomParameters method to execute showPulseDFP
+  E.g.:</p>
+</li>
+</ul>
+<pre><code class="java">  @Override
+  protected void onResume() {
+    super.onResume();
+
+    // Enable Pulse DFP feature
+    String result = mApplication.getPulseSDKInstance().enablePulseDFP(this);
+
+    // Verify instantiation
+    if(success.equalsIgnoreCase(result)) {
+
+       @SuppressWarnings(&quot;static-access&quot;)
+       HashMap&lt;String,String&gt; mDFPCustomParameters = mApplication.getPulseSDKInstance().getDFPCustomParameters();
+
+       if((null != mDFPCustomParameters)&amp;&amp;(mDFPCustomParameters.size()==8)) {
+        showPulseDFP(mDFPCustomParameters);
+       }else {
+        showDefaultDFP();
+       }
+
+    }else { 
+
+      //Pulse DFP is not available
+      showDefaultDFP();
+      }
+  } 
+</code></pre>
+
+<ul>
+<li>Use disablePulseDFP to disable Pulse ads when app is not open
+  E.g.:</li>
+</ul>
+<pre><code class="java">  @Override
+  protected void onPause() {
+    String result = mApplication.getPulseSDKInstance().disablePulseDFP();
+    super.onPause();
+  }
+</code></pre>
+
+<ul>
+<li>Use addCustomTargeting in showPulseDFP to pass user’s real time location needs to Google DFP
+  E.g.:</li>
+</ul>
+<pre><code class="java">  private void showPulseDFP(HashMap&lt;String, String&gt; mDFPCustomParameters) {
+    if(true != mPulseDFP) {
+      mPulseDFP = true;
+      if((null != mDFPCustomParameters)&amp;&amp;(mDFPCustomParameters.size()==8)) {
+
+        // Add customer parameters to DFP
+        Iterator&lt;String&gt; keySetIterator = mDFPCustomParameters.keySet().iterator();
+        String[] pulseDfpKey = new String[mDFPCustomParameters.size()];
+        String[] pulseDfpKeyValue = new String[mDFPCustomParameters.size()];
+
+        int index = 0;
+        while(keySetIterator.hasNext()){
+          String key = keySetIterator.next();
+          pulseDfpKey[index] = key;
+          pulseDfpKeyValue[index] = mDFPCustomParameters.get(key);
+          index++;
+        }
+
+        PublisherAdRequest newRequest = new PublisherAdRequest.Builder()
+        // Remove in Production
+        .addTestDevice(&quot;951599B6898217134B31EEB6E9145F9&quot;)
+        // Pulse DFP Targeting
+        .addCustomTargeting(pulseDfpKey[0],pulseDfpKeyValue[0])
+        .addCustomTargeting(pulseDfpKey[1],pulseDfpKeyValue[1])
+        .addCustomTargeting(pulseDfpKey[2],pulseDfpKeyValue[2])
+        .addCustomTargeting(pulseDfpKey[3],pulseDfpKeyValue[3])
+        .addCustomTargeting(pulseDfpKey[4],pulseDfpKeyValue[4])
+        .addCustomTargeting(pulseDfpKey[5],pulseDfpKeyValue[5])
+        .addCustomTargeting(pulseDfpKey[6],pulseDfpKeyValue[6])
+        .addCustomTargeting(pulseDfpKey[7],pulseDfpKeyValue[7])
+        // Media DFP Targeting
+        .addCustomTargeting(&quot;keyword&quot;,&quot;mobile_banner&quot;)
+        .build();
+
+        mPublisherAdView.loadAd(newRequest);
+      }else {
+        Log.i(TAG,&quot;mDFPCustomParameters==Null , mDFPCustomParameters.size()!=8&quot;);
+      }
+    }else {
+      Log.i(TAG, &quot; mPulseDFP ==true&quot;);
+    }
+  }
+
+  private void showDefaultDFP() {
+    PublisherAdRequest newRequest = new PublisherAdRequest.Builder()
+    // Remove in Production
+    .addTestDevice(&quot;951599B6898217134B31EEB6E9145F9&quot;)
+    // DFP Targeting
+    .addCustomTargeting(&quot;keyword&quot;,&quot;mobile_banner&quot;)
+    .build();
+
+    mPublisherAdView.loadAd(newRequest);
+  }
+</code></pre>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../integration/android_studio/index.html" title="Android Studio" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Android Studio
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Pulse iD
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+        <script src="../../highlight.pack.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

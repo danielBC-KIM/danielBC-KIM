@@ -1,0 +1,10 @@
+.article img {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.copyright {
+    visibility: hidden;
+}
+.article ol, .article p, .article ul {
+margin-top: 1em;
+}
